@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
+//350
 public class IntersecTwoArray2 {
     public static int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer,Integer> map1 = new HashMap<>();

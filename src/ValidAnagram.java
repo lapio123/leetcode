@@ -1,6 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
-
+//242
 public class ValidAnagram {
     public static boolean isAnagram(String s, String t) {
         Map<Character,Integer> map = new HashMap<>();

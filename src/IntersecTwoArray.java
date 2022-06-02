@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
@@ -13,17 +14,31 @@ public class IntersecTwoArray {
         HashSet<Integer> com_set = new HashSet<>();
         for (int i=0;i<nums2.length;i++)
         {
-            if(h_set.contains(nums2[i]))
-                com_set.add(nums2[i]);
+            com_set.add(nums2[i]);
         }
-        Integer[] res = new Integer[com_set.size()];
-        com_set.toArray(res);
-        int[] final_res = new int[res.length];
-        for (int i=0;i<res.length;i++)
+        int[] final_res = new int[nums1.length];
+        int index=0;
+        if(com_set.size()<h_set.size())
         {
-            final_res[i]=res[i];
+            for(Integer i : com_set)
+            {
+                if(h_set.contains(i))
+                {
+                    final_res[index++]=i;
+                }
+            }
         }
-        return final_res;
+        else
+        {
+            for(Integer i : h_set)
+            {
+                if(com_set.contains(i))
+                {
+                    final_res[index++]=i;
+                }
+            }
+        }
+        return Arrays.copyOfRange(final_res,0,index);
     }
 
     public static void main(String[] args) {
