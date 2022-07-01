@@ -1,6 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
-
+//447
 public class RangeBoomer {
     public static int distance(int[] a, int[] b)
     {
